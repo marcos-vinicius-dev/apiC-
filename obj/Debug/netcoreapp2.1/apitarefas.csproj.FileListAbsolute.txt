@@ -1,0 +1,14 @@
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.csprojAssemblyReference.cache
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.csproj.CoreCompileInputs.cache
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.RazorAssemblyInfo.cache
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.RazorAssemblyInfo.cs
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.AssemblyInfoInputs.cache
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.AssemblyInfo.cs
+C:\Users\marco\Desktop\apitarefas\bin\Debug\netcoreapp2.1\apitarefas.deps.json
+C:\Users\marco\Desktop\apitarefas\bin\Debug\netcoreapp2.1\apitarefas.runtimeconfig.json
+C:\Users\marco\Desktop\apitarefas\bin\Debug\netcoreapp2.1\apitarefas.runtimeconfig.dev.json
+C:\Users\marco\Desktop\apitarefas\bin\Debug\netcoreapp2.1\apitarefas.dll
+C:\Users\marco\Desktop\apitarefas\bin\Debug\netcoreapp2.1\apitarefas.pdb
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.RazorTargetAssemblyInfo.cache
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.dll
+C:\Users\marco\Desktop\apitarefas\obj\Debug\netcoreapp2.1\apitarefas.pdb
