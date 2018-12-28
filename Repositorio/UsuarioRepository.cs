@@ -19,7 +19,7 @@ namespace apitarefas.Repositorio
 
         public Usuario Find(long id)
         {
-            return db.Usuarios.FirstOrDefault(u => u.usuario_id == id);
+            return db.Usuarios.FirstOrDefault(u => u.Id == id);
         }
 
         public IEnumerable<Usuario> GetAll()
@@ -29,7 +29,7 @@ namespace apitarefas.Repositorio
 
         public void Remove(long id)
         {
-            var entity = db.Usuarios.First(u=> u.usuario_id == id);
+            var entity = db.Usuarios.First(u=> u.Id == id);
             db.Usuarios.Remove(entity);
             db.SaveChanges();
         }

@@ -2,9 +2,10 @@ namespace apitarefas.Models
 {
     public class Usuario
     {
-        public int usuario_id { get; set; }
-        public string login { get; set; }
-        public string senha { get; set; }
-        public string nome { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Funcao { get; set; }
+        public string Telefone { get; set; }
+        public string Ramal { get; set; }
     }
 }

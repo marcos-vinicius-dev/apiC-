@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace apitarefas
 {
@@ -25,16 +26,17 @@ namespace apitarefas
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BancoContext>( options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConection")));
+
+            services.AddDbContextPool<BancoContext>(
+                options => options.UseMySql("Server=localhost;Database=listatarefas;User=root;Password=;convert zero datetime=True") // replace with your Connection String
+            );
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+            services.AddTransient<ITarefaRepository, TarefaRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
