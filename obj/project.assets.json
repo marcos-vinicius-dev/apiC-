@@ -2256,7 +2256,21 @@
           "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.dll": {}
         }
       },
-      "Microsoft.IdentityModel.Logging/5.2.0": {
+      "Microsoft.IdentityModel.JsonWebTokens/5.2.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.2.4",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Microsoft.IdentityModel.JsonWebTokens.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microsoft.IdentityModel.JsonWebTokens.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Logging/5.2.4": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -2321,14 +2335,15 @@
           "lib/netstandard1.4/Microsoft.IdentityModel.Protocols.WsFederation.dll": {}
         }
       },
-      "Microsoft.IdentityModel.Tokens/5.2.0": {
+      "Microsoft.IdentityModel.Tokens/5.2.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Logging": "5.2.0",
+          "Microsoft.IdentityModel.Logging": "5.2.4",
           "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "10.0.1",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Tools": "4.3.0",
+          "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
@@ -3216,10 +3231,11 @@
           }
         }
       },
-      "System.IdentityModel.Tokens.Jwt/5.2.0": {
+      "System.IdentityModel.Tokens.Jwt/5.2.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "5.2.0",
+          "Microsoft.IdentityModel.JsonWebTokens": "5.2.4",
+          "Microsoft.IdentityModel.Tokens": "5.2.4",
           "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "10.0.1"
         },
@@ -6312,18 +6328,41 @@
         "microsoft.extensions.webencoders.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/5.2.0": {
-      "sha512": "OgiaeDGsuTpXrx77a4gyN6Flp4y7jro4La92UtVEEVxnRb+TnRxawVYY3Z5EVme5fSwvE31vo2iNAwI/jBKjPg==",
+    "Microsoft.IdentityModel.JsonWebTokens/5.2.4": {
+      "sha512": "Tk3W9g/TOBBPkL/RU1KgOdsCzXhjOAG1/g75OMueXQev+ImPiDheB68ByRBicqTR0R14BUux9+msbWaAzzwo5Q==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/5.2.0",
+      "path": "microsoft.identitymodel.jsonwebtokens/5.2.4",
       "files": [
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net45/Microsoft.IdentityModel.JsonWebTokens.pdb",
+        "lib/net45/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net451/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net451/Microsoft.IdentityModel.JsonWebTokens.pdb",
+        "lib/net451/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/netstandard1.4/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/netstandard1.4/Microsoft.IdentityModel.JsonWebTokens.pdb",
+        "lib/netstandard1.4/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "microsoft.identitymodel.jsonwebtokens.5.2.4.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Logging/5.2.4": {
+      "sha512": "RDA2J7T1xCcxWx/WBlgFory5DR70tLofODL/tJzWU2JvYmG/m2Az7sy3RFYZs8RE6aAG+i25h8ebb5Z8SDTkww==",
+      "type": "package",
+      "path": "microsoft.identitymodel.logging/5.2.4",
+      "files": [
+        ".signature.p7s",
         "lib/net45/Microsoft.IdentityModel.Logging.dll",
+        "lib/net45/Microsoft.IdentityModel.Logging.pdb",
         "lib/net45/Microsoft.IdentityModel.Logging.xml",
         "lib/net451/Microsoft.IdentityModel.Logging.dll",
+        "lib/net451/Microsoft.IdentityModel.Logging.pdb",
         "lib/net451/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard1.4/Microsoft.IdentityModel.Logging.dll",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Logging.pdb",
         "lib/netstandard1.4/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.5.2.0.nupkg.sha512",
+        "microsoft.identitymodel.logging.5.2.4.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
@@ -6372,18 +6411,22 @@
         "microsoft.identitymodel.protocols.wsfederation.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/5.2.0": {
-      "sha512": "Uz1Dk5Gw/jgIHEzac9cXhq7pH0Hf5P73vf23hR6QJn0IamLbPG4qoHnGyPMn9qQXc+jDb/j3fWOhvWGrteJXtA==",
+    "Microsoft.IdentityModel.Tokens/5.2.4": {
+      "sha512": "Ui9gfQLq5FHmnJK0teAH3vkpsy1sU6PFN2c0RbpgHW34+NPISQ5FQAdik4JyT/IvQXI8ZmQU+g94NErwdKYZZg==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/5.2.0",
+      "path": "microsoft.identitymodel.tokens/5.2.4",
       "files": [
+        ".signature.p7s",
         "lib/net45/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net45/Microsoft.IdentityModel.Tokens.pdb",
         "lib/net45/Microsoft.IdentityModel.Tokens.xml",
         "lib/net451/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net451/Microsoft.IdentityModel.Tokens.pdb",
         "lib/net451/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.dll",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.pdb",
         "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.5.2.0.nupkg.sha512",
+        "microsoft.identitymodel.tokens.5.2.4.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
@@ -8362,18 +8405,22 @@
         "system.globalization.extensions.nuspec"
       ]
     },
-    "System.IdentityModel.Tokens.Jwt/5.2.0": {
-      "sha512": "E8tNMfMWPvlSF5fvmMIVZZHlGuIZzE5uktuR+GN2gFdngh0k6xoZquxfjKC02d0NqfsshNQVTCdSKXD5e9/lpA==",
+    "System.IdentityModel.Tokens.Jwt/5.2.4": {
+      "sha512": "ZKFZ3JZxgdB0SGrEfFB5HZVUpsss+gPhLcQRjnYB2gCXVeaMI6y/xj0I4Y1sG2igQd+jhJNENM8CPtBBG7rYFg==",
       "type": "package",
-      "path": "system.identitymodel.tokens.jwt/5.2.0",
+      "path": "system.identitymodel.tokens.jwt/5.2.4",
       "files": [
+        ".signature.p7s",
         "lib/net45/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net45/System.IdentityModel.Tokens.Jwt.pdb",
         "lib/net45/System.IdentityModel.Tokens.Jwt.xml",
         "lib/net451/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net451/System.IdentityModel.Tokens.Jwt.pdb",
         "lib/net451/System.IdentityModel.Tokens.Jwt.xml",
         "lib/netstandard1.4/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/netstandard1.4/System.IdentityModel.Tokens.Jwt.pdb",
         "lib/netstandard1.4/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.5.2.0.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.5.2.4.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
@@ -11578,8 +11625,10 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.1.0",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 2.1.0"
+      "Pomelo.EntityFrameworkCore.MySql >= 2.1.0",
+      "System.IdentityModel.Tokens.Jwt >= 5.2.4"
     ]
   },
   "packageFolders": {
@@ -11627,6 +11676,10 @@
             "target": "Package",
             "version": "[2.1.0, )"
           },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.1.0, )",
@@ -11635,6 +11688,10 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[2.1.0, )"
+          },
+          "System.IdentityModel.Tokens.Jwt": {
+            "target": "Package",
+            "version": "[5.2.4, )"
           }
         },
         "imports": [

@@ -11,6 +11,8 @@ namespace apitarefas.Repositorio
 
          Usuario Find(long id);
 
+         Usuario Find(string login, string senha);
+
          void Remove(long id);
 
          void Update(Usuario user);

@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using apitarefas.Models;
 using apitarefas.Repositorio;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace apitarefas.Controllers
 {
-    
+    [Authorize]
     [Route("api/usuarios")]
-    public class UsuariosControllers : Controller
+    public class UsuariosControllers : ControllerBase
     {
         private readonly IUsuarioRepository _usarioReposity;
 
@@ -62,12 +63,10 @@ namespace apitarefas.Controllers
                 {
                     return NotFound();
                 }else{
-                    _usuario.Nome = usuario.Nome;
-                    _usuario.Funcao = usuario.Funcao;
-                    _usuario.Telefone = usuario.Telefone;
-                    _usuario.Ramal = usuario.Ramal;
+                    _usuario.senha = usuario.senha;
+                    _usuario.nome = usuario.nome;
                     _usarioReposity.Update(_usuario);
-                    return new NoContentResult();//void
+                    return new NoContentResult();
                 }
             }
         }

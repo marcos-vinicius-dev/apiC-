@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using apitarefas.Models;
 using apitarefas.Repositorio;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace apitarefas.Controllers
 {
+    
     [Route("api/tarefas")]
-    public class TarefasControllers : Controller
+    [Authorize()]
+    public class TarefasControllers : ControllerBase
     {
         private readonly ITarefaRepository _tarefaReposity;
 
@@ -22,6 +25,7 @@ namespace apitarefas.Controllers
            return _tarefaReposity.GetAll();
         }
 
+
         [HttpGet("{id}", Name="GetTarefa")]
         public IActionResult GetById(int id)
         {
@@ -31,7 +35,7 @@ namespace apitarefas.Controllers
                 return NotFound();
             }else{
                 return new ObjectResult(tarefa);
-            }
+            }       
         }
 
         [HttpPost]

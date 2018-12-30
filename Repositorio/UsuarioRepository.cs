@@ -22,6 +22,11 @@ namespace apitarefas.Repositorio
             return db.Usuarios.FirstOrDefault(u => u.Id == id);
         }
 
+        public Usuario Find(string login, string senha)
+        {
+            return db.Usuarios.FirstOrDefault(u => u.login == login && u.senha == senha);
+        }
+
         public IEnumerable<Usuario> GetAll()
         {
             return db.Usuarios.ToList();
